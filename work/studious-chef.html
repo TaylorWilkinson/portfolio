@@ -25,7 +25,7 @@
 			<a href="index.html" class="nav-item nav-link active navbar-brand" id="navLogo">
 				<img id="tw-icon" src="../img/icon.png" alt="Taylor Wilkinson portfolio icon">
 			</a><!-- inital icon -->
-			<a href="index.html" class="nav-item nav-link active navbar-brand" id="navNameText">
+			<a href="../index.html" class="nav-item nav-link active navbar-brand" id="navNameText">
 				taylor wilkinson
 			</a><!-- inital icon -->
 
@@ -35,19 +35,224 @@
 
 			<div class="collapse navbar-collapse" id="toggleNavBar">
 				<div class="navbar-nav ml-auto">
-					<a href="projects.html" class="nav-item nav-link">PROJECTS</a>
+					<a href="../projects.html" class="nav-item nav-link">PROJECTS</a>
 					<a href="#" class="nav-item nav-link">RESUME</a>
-					<a href="about.html" class="nav-item nav-link">ABOUT</a>
+					<a href="../about.html" class="nav-item nav-link">ABOUT</a>
 				</div>
 			</div> <!-- Collapse -->
 		</div>
 	</nav><!-- Navigation bar -->
 
-	<div class="container">
-    </div><!-- landing page content TBD -->
+
+	<div class="container body-copy">
+		<div class="row full-row">
+			<div class="col-lg-6 no-side-padding">
+				<h1>The Studious Chef</h1>
+			</div>
+		</div> <!-- title section -->
+
+		<div class="row">
+			<div class="col-lg-4">
+				<h2>team</h2>
+				<p>Individual project</p>
+			</div>
+			<div class="col-lg-4">
+				<h2>tools</h2>
+				<p>XAMPP, MySQL, PHP, HTML, CSS, AJAX</p>
+			</div>
+			<div class="col-lg-4">
+				<h2>my role</h2>
+				<p>Web Developer & Designer</p>
+			</div>
+		<!-- close project summary -->
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>brief</h2>
+				<p>Develop a web application using a database of our own choosing that implements a set of required technologies. The final course project for Internet Computing Technologies (IAT 352). 2017.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>coding</h2>
+				<p>With this project, I had the opportunity to learn several new programming languages as well as gaining more experience with HTML and CSS. The webpages were coded in PHP, with embedded HTML and CSS in order to realize the design. AJAX was used in order to support live filtering and updating on the recipe browsing page. Finally, MySQL was used to handle database requests, such as logging in or fetching recipes from the "recipe" database.</p>
+			</div>
+			<div class="col-lg-6">
+				<pre>
+					<code>					
+&lt;body&gt;
+  &lt;!-- Navigation Bar --&gt;
+  &lt;?php require_once("required/nav_bar.php"); ?&gt;
+
+  &lt;section class = "login-panel"&gt;
+    &lt;div class = "login-image"&gt;
+      &lt;img src="img/pizza.jpeg" alt="login page img"&gt;
+      &lt;h1&gt;LOGIN&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;?php
+    //If user is already logged in as visitor
+    if(isset($_SESSION['valid_visitor'])){
+      //logged as valid visitor
+      echo "&lt;p&gt;Already logged in as ".$_SESSION['valid_member']."&lt;/p&gt;";
+    }
+
+    //authenticating if members are valid
+    if(!isset($_SESSION['valid_member'])){
+      //if there's no 'valid_visitor' session,
+      //and there's a posted visitor user & pass,
+      //valid_visitor is set to the submitted vis_username
+
+      if(isset($_POST['submit'])){
+        //check if form was filled
+        if(isset($_POST['mbr_username'])){
+          $member_user = $_POST['mbr_username'];
+        }
+        else {
+          echo "&lt;p&gt;Please enter a username!&lt;/p&gt;";
+          die;
+        }
+
+        if (isset($_POST['mbr_pass'])) {
+          //login info needed
+          $member_pass = $_POST['mbr_pass'];
+          $member_pass = hash("sha1", $member_pass);
+        } else {
+          echo "&lt;p&gt;Please enter a password&lt;/p&gt;";
+          die;
+        }
+
+        //Perform DB query
+        $query = &lt;&lt;&lt;mbr
+        SELECT username, pass
+        FROM members
+        WHERE username="$member_user"
+        AND pass="$member_pass";
+mbr;
+        //test query
+        //echo $query;
+
+        //Check results
+        $result = mysqli_query($connection, $query);
+
+        $row = mysqli_fetch_row($result);
+        $count = $row[0];
+
+        if(empty($row)){
+          echo "&lt;p&gt;Invalid Login Info!&lt;br/&gt;Please try again.&lt;/p&gt;";
+        } else {
+          if($count){
+            $_SESSION['valid_member'] = $_POST["mbr_username"];
+            header('Location: logged_in.php');
+          }
+        }
+
+        // If there's an error, print it
+        if ($db-&gt;connect_error)  {
+          die('Connect Error: ' . $db-&gt;connect_error);
+        }
+
+        // Close DB connection
+        $db-&gt;close();
+      }
+    }
+
+    //if user is logged in as an authenticated member
+    if(isset($_SESSION["valid_member"])) {
+      header('Location: logged_in.php');
+    } else {
+      //the member was not authenticated yet, or failed previously.
+      //Show the form here.
+      ?&gt;
+
+    &lt;!-- Login form --&gt;
+    &lt;form name="login_mbr_input" action = "login_mbr_auth.php" method="POST"&gt;
+      &lt;h2&gt;Member Log In&lt;/h2&gt;
+      &lt;input class="form-input" type="text" name="mbr_username" placeholder="User Name"&gt;&lt;br&gt;
+        &lt;input class="form-input" type="password" name="mbr_pass" placeholder="Password"&gt;&lt;br&gt;
+        &lt;input class="form-button button-grey" name="submit" type="submit" value="Submit"&gt;
+      &lt;p&gt;Don't have a member account? &lt;a href="mbrRegForm.php"&gt;Sign up!&lt;/a&gt;&lt;/p&gt;
+    &lt;/form&gt;
+    &lt;?php
+  }
+
+  //Main menu bar for all pages
+    require("required/footer.php"); ?&gt;
+&lt;/body&gt;
+					</code>
+				</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>database design</h2>
+				<p>For The Studious Chef, the conceptual database design was realized through ER diagrams. This helped to determine website functionality in regards to the three databases the site used: members, visitors and recipes. The database of recipes was built in XAMPP with 20 recipes to begin with, which allowed for non-registered users to still browse some content.</p>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/chef_XAMPP.png" alt="Image of the original proposed ER model diagram for The Studious Chef">
+					<figcaption>
+						Image of the original proposed ER model diagram for The Studious Chef
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>design & development</h2>
+				<p>The Studious Chef aims to help students with cooking proper meals for themselves, instead of ordering takeout or making basic mac 'n cheese meals. It helps these users by providing a consolidated list of delicious recipes posted by student users, for students. With this in mind, I wanted this website to look clean, simple and approachable to the user, so I restricted the colours being used to black and white with some powder blue accents. The banner pictures were free stock photos picked from Pexels.com, which were all slightly muted with a lower brightness in CSS. This allowed for consistency between all of the images, even if some were more vibrant than others.</p>
+				<p>Instead of having 5 different pages to be loaded for each list of recipes, AJAX was implemented on the "Browse" page so that the tables could change and be updated live on the one page.</p>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/studious-chef-mockup-browse.png" alt="Mockup of The Studious Chef's browse page">
+					<figcaption>
+						Mockup of The Studious Chef's "Browse Recipes" page. April 2017.
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>reflections</h2>
+				<p>One of the original proposed ideas for The Studious Chef was for members to have profile pages where visitors could see their posted recipes, their social media feeds (if provided by the member), and follow members for their recipes. That way, visitors would also have a feed of recipes from their preferred members. Unfortunately this was too difficult given the scope of the project, and this feature was dropped.</p>
+				<p>To bring this project to completion, I would not only implement these features, but I would also allow for images to be uploaded with the recipes to entice other users by showing the delicious result. I would also fix the search page so that it was fully functional, allowing for a more direct search instead of passive browsing.</p>
+				<p>Given that this project was my first experience working with PHP, MySQL, and AJAX, I'm very pleased with the final outcome. The design achieves the look that I had envisioned in early stages of ideation, and the core database functionality is operational.</p>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/studious-chef-login.gif" alt="Gif showing a user logging in as a visitor to The Studious Chef.">
+					<figcaption>
+						Mockup of The Studious Chef's "Browse Recipes" page. April 2017.
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+	<!-- landing page content TBD -->
+
+	<button onclick="topFunction()" id="backToTopButton" title="Go to top">Back To Top</button> <!-- Button to scroll back to top because, that's too much work! -->
+
+	<footer class="footer" id="portfolio-footer">
+		<div class="container">
+			<div class="row">
+				<a href="https://github.com/TaylorWilkinson/" target="_blank">
+					<img class="icon" src="../img/github-logo.png" alt="GitHub logo">
+				</a>
+				<a href="https://www.linkedin.com/in/taylorjwilkinson/" target="_blank">
+					<img class="icon" src="../img/linkedin-logo.png" alt="LinkedIn logo">
+				</a>
+				<a href="mailto:tjwilkin@sfu.ca">
+					<img class="icon" src="../img/email-logo.png" alt="Email envelope icon">
+				</a>
+			</div>
+		</div>
+	</footer> <!-- footer -->
     
-  	<script src="js/jquery.slim.min.js"></script>
-  	<script src="js/popper.min.js"></script>
-  	<script src="js/bootstrap.min.js"></script>
+  	<script src="../js/jquery.slim.min.js"></script>
+  	<script src="../js/popper.min.js"></script>
+  	<script src="../js/bootstrap.min.js"></script>
+  	<script src="../js/scrollButton.js"></script>
 </body>
 </html>

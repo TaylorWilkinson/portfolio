@@ -3,6 +3,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .container {
     display: -webkit-flex;
     display: -ms-flex;
@@ -16,6 +17,10 @@
     -ms-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+}
+
+.body-copy {
+    margin-top: 2rem;
 }
 
 #navLogo {
@@ -75,6 +80,7 @@ img {
 }
 
 
+/* MEDIA QUERIES */
 @media (max-width: 576px) {
     /*576px = sm breakpoint in Bootstrap*/
     #navNameText {
@@ -83,6 +89,20 @@ img {
 
     #toggleNavBar {
         margin-top: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    /* making rows go full width, despite content */
+    .full-row {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    .no-side-padding {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 

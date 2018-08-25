@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>MyShape Board - Taylor Wilkinson - Portfolio</title>
+	<title>Form Validator - Taylor Wilkinson - Portfolio</title>
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,7 @@
 			<a href="index.html" class="nav-item nav-link active navbar-brand" id="navLogo">
 				<img id="tw-icon" src="../img/icon.png" alt="Taylor Wilkinson portfolio icon">
 			</a><!-- inital icon -->
-			<a href="index.html" class="nav-item nav-link active navbar-brand" id="navNameText">
+			<a href="../index.html" class="nav-item nav-link active navbar-brand" id="navNameText">
 				taylor wilkinson
 			</a><!-- inital icon -->
 
@@ -36,19 +36,152 @@
 
 			<div class="collapse navbar-collapse" id="toggleNavBar">
 				<div class="navbar-nav ml-auto">
-					<a href="projects.html" class="nav-item nav-link">PROJECTS</a>
+					<a href="../projects.html" class="nav-item nav-link">PROJECTS</a>
 					<a href="#" class="nav-item nav-link">RESUME</a>
-					<a href="about.html" class="nav-item nav-link">ABOUT</a>
+					<a href="../about.html" class="nav-item nav-link">ABOUT</a>
 				</div>
 			</div> <!-- Collapse -->
 		</div>
 	</nav><!-- Navigation bar -->
 
-	<div class="container">
-    </div><!-- landing page content TBD -->
+
+	<div class="container body-copy">
+		<div class="row full-row">
+			<div class="col-lg-6 no-side-padding">
+				<h1>BlackBerry Form Validator</h1>
+			</div>
+		</div> <!-- title section -->
+
+
+		<div class="row full-row">
+			<div class="col-lg-4 no-side-padding">
+				<h2>team</h2>
+				<p>Individual project, while working for BlackBerry</p>
+			</div>
+			<div class="col-lg-4 no-side-padding">
+				<h2>tools</h2>
+				<p>Eclipse, JavaScript, XML, Git</p>
+			</div>
+			<div class="col-lg-4 no-side-padding">
+				<h2>my role</h2>
+				<p>Web Developer</p>
+			</div>
+		</div> <!-- close project summary -->
+
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>brief</h2>
+				<p>Tasked with this job by one of the Web Applications Developers on my team. Required to restrict values that could be put into the name field of certain components on BlackBerry's authoring site. August 2018.</p>
+			</div>
+		</div> <!-- end of section :: brief -->
+
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>coding</h2>
+				<p>Copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy.</p>
+			</div>
+			<div class="col-lg-6">
+				<pre>
+					<code>
+/*
+ Purpose: Restrict the name field for form inputs to only allow letters, numbers, dashes (-), and underscores (_)
+ Based on AEM documentation for TouchUI Validation (https://helpx.adove.com/experience-manager/using/creating-touchui-validate.html)
+ Used for the following form components: "consent", "hidden", "options", "text" 
+*/
+
+(function (document, $, ns) {
+    "use strict";
     
-  	<script src="js/jquery.slim.min.js"></script>
-  	<script src="js/popper.min.js"></script>
-  	<script src="js/bootstrap.min.js"></script>
+    $(document).on("click", ".cq-dialog-submit", function (e) {
+        e.stopPropagation();
+
+        var $form = $(this).closest("form.foundation-form"),
+        name = $form.find("[name='./name']").val(),
+        campaign = $form.find("[name='./campaign']").val(),
+        message, clazz = "coral-Button ",
+        patterns = {regex: /^[a-zA-Z0-9-_]*$/};
+
+        /* To verify that the component will only work for the desired components,
+        determine the "action" path of the form and confirm the relevant path */
+        var formActionPath = ($form[0]).action,
+        consentActionPath = formActionPath.search("/consent"),
+        hiddenActionPath = formActionPath.search("/hidden"),
+        optionsActionPath = formActionPath.search("/options"),
+        textActionPath = formActionPath.search("/text");
+        
+        /* If-statement uses regex to confirm that only desired characters are used, and checks the component's action path */
+        if((!patterns.regex.test(name)) && ((consentActionPath != -1) || (hiddenActionPath != -1) || (optionsActionPath != -1) || (textActionPath != -1))){
+        	e.preventDefault();
+        	
+        	ns.author.ui.helpers.prompt({
+        		title: Granite.I18n.get("Invalid Input"),
+                message: "Please enter a name that only uses alphanumeric characters, dashes, or underscores. (A-Z, 0-9, \"-\", or \"_\")",
+                type: "ERROR",
+                actions: [{
+                    id: "CANCEL",
+                    text: "CANCEL"
+                }],
+                callback: function (actionId) {
+                	if (actionId === "CANCEL") {
+                	}
+                }
+        	});
+        }
+    });
+})(document, Granite.$, Granite);		
+					</code>
+				</pre>
+				<p class="snippet">JavaScript code used in the form validator.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>research</h2>
+				<p>Copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy.</p>
+			</div>
+			<div class="col-lg-6">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>implementation</h2>
+				<p>Copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy.</p>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/validator-AEM.png" alt="alt statement to go here">
+					<figcaption>
+						[caption to go here]
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+	<!-- landing page content TBD -->
+
+	<button onclick="topFunction()" id="backToTopButton" title="Go to top">Back To Top</button> <!-- Button to scroll back to top because, that's too much work! -->
+
+	<footer class="footer" id="portfolio-footer">
+		<div class="container">
+			<div class="row">
+				<a href="https://github.com/TaylorWilkinson/" target="_blank">
+					<img class="icon" src="../img/github-logo.png" alt="GitHub logo">
+				</a>
+				<a href="https://www.linkedin.com/in/taylorjwilkinson/" target="_blank">
+					<img class="icon" src="../img/linkedin-logo.png" alt="LinkedIn logo">
+				</a>
+				<a href="mailto:tjwilkin@sfu.ca">
+					<img class="icon" src="../img/email-logo.png" alt="Email envelope icon">
+				</a>
+			</div>
+		</div>
+	</footer> <!-- footer -->
+    
+  	<script src="../js/jquery.slim.min.js"></script>
+  	<script src="../js/popper.min.js"></script>
+  	<script src="../js/bootstrap.min.js"></script>
+  	<script src="../js/scrollButton.js"></script>
 </body>
 </html>
