@@ -71,7 +71,7 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<h2>brief</h2>
-				<p>Tasked with this job by one of the Web Applications Developers on my team. Required to restrict values that could be put into the name field of certain components on BlackBerry's authoring site. August 2018.</p>
+				<p>After seeking additional work and challenge during my work term, I was tasked with this task by one of the Web Applications Developers on my team. I was asked to restrict the allowable characters that would be accepted by the name field of specific components on BlackBerry’s authoring site. August 2018.</p>
 			</div>
 		</div> <!-- end of section :: brief -->
 
@@ -86,12 +86,12 @@
 /*
  Purpose: Restrict the name field for form inputs to only allow letters, numbers, dashes (-), and underscores (_)
  Based on AEM documentation for TouchUI Validation (https://helpx.adove.com/experience-manager/using/creating-touchui-validate.html)
- Used for the following form components: "consent", "hidden", "options", "text" 
+ Used for the following form components: "consent", "hidden", "options", "text"
 */
 
 (function (document, $, ns) {
     "use strict";
-    
+
     $(document).on("click", ".cq-dialog-submit", function (e) {
         e.stopPropagation();
 
@@ -108,11 +108,11 @@
         hiddenActionPath = formActionPath.search("/hidden"),
         optionsActionPath = formActionPath.search("/options"),
         textActionPath = formActionPath.search("/text");
-        
+
         /* If-statement uses regex to confirm that only desired characters are used, and checks the component's action path */
         if((!patterns.regex.test(name)) && ((consentActionPath != -1) || (hiddenActionPath != -1) || (optionsActionPath != -1) || (textActionPath != -1))){
         	e.preventDefault();
-        	
+
         	ns.author.ui.helpers.prompt({
         		title: Granite.I18n.get("Invalid Input"),
                 message: "Please enter a name that only uses alphanumeric characters, dashes, or underscores. (A-Z, 0-9, \"-\", or \"_\")",
@@ -128,7 +128,7 @@
         	});
         }
     });
-})(document, Granite.$, Granite);		
+})(document, Granite.$, Granite);
 					</code>
 				</pre>
 				<p class="snippet">JavaScript code used in the form validator.</p>
@@ -178,7 +178,7 @@
 			</div>
 		</div>
 	</footer> <!-- footer -->
-    
+
   	<script src="../js/jquery.slim.min.js"></script>
   	<script src="../js/popper.min.js"></script>
   	<script src="../js/bootstrap.min.js"></script>
