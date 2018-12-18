@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.navigation {
+  margin-bottom: 1rem;
+}
+
 .container {
     display: -webkit-flex;
     display: -ms-flex;

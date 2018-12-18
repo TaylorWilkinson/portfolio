@@ -77,7 +77,7 @@ div code {
     background-color: #F4F4F4;
     padding: 0.5rem 1.5rem;
     display: block;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .snippet {
@@ -143,8 +143,9 @@ img {
 }
 
 figure {
-    width: 80%;
-    margin: 1rem 1rem 1rem 0;
+    /* width: 80%; */
+    /* margin: 1rem 1rem 1rem 0; */
+    margin: 1rem 0 1rem 0;
 }
 
 figure img {
@@ -164,7 +165,7 @@ section p {
 }
 
 #portfolio-footer {
-    margin: 5rem 0 1.5rem 0;
+    margin: 2.5rem 0 1.5rem 0;
 
 }
 
@@ -259,8 +260,35 @@ section p {
     margin-bottom: 1.75rem;
 }
 
+.project-icon {
+  opacity: 1!important;
+  -webkit-transition: opacity 0.5s ease-out!important;
+  -o-transition: opacity 0.5s ease-out!important;
+  transition: opacity 0.5s ease-out!important;
+}
+
+.project-icon:active, .project-icon:focus, .project-icon:hover {
+  opacity: 0.2!important;
+  -webkit-transition: opacity 0.5s ease-out!important;
+  -o-transition: opacity 0.5s ease-out!important;
+  transition: opacity 0.5s ease-out!important;
+}
+
+#proj-header-1, #proj-header-2, #proj-header-3, #proj-header-4, #proj-header-5, #proj-header-6, #proj-header-7, #proj-header-8 {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* .centered-header:active, .centered-header:focus, .centered-header:hover {
+  color: #88BBD6;
+} */
+
 #filter-bar {
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
 }
 
 .filter-button {
@@ -268,13 +296,16 @@ section p {
     color: #FFFFFF;
     background-color: #73C887;
     border-color: #73C887;
-
 }
 
 .filter-button:active, .filter-button:focus, .filter-button:hover {
     color: #73C887;
     background-color: #FFFFFF;
     border-color: #FFFFFF;
+
+    -webkit-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
 }
 
 

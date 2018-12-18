@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-light bg-white navbar-expand-sm" id="navbar-bg">
+	<nav class="navigation navbar navbar-light bg-white navbar-expand-sm" id="navbar-bg">
 		<div class="container-fluid">
 			<a href="index.html" class="nav-item nav-link active navbar-brand" id="navLogo">
 				<img id="tw-icon" src="img/icon.png" alt="Taylor Wilkinson portfolio icon">
@@ -50,7 +50,7 @@
 				<!-- General Project Types -->
 				<button class="filter-button" data-filter="all">All</button>
 				<button class="filter-button" data-filter="web">Web Development</button>
-				<button class="filter-button" data-filter="java">Java</button>
+				<button class="filter-button" data-filter="java">Java & Other Languages</button>
 				<button class="filter-button" data-filter="graphics">Graphic Design</button>
 				<button class="filter-button" data-filter="communications">Communications</button>
 			</div>
@@ -60,59 +60,59 @@
 
 	<div class="container">
 		<!-- Form Validator -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
+		<div id ="prj-container-1" class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
 			<a href="work/validator.html">
-				<img src="img/placeholder-150x150.png" alt="placeholder square">
-				<h3>Form Validator</h3>
-			</a>
-		</div>
-		<!-- IAT 339 Portfolio -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
-			<a href="work/first-portfolio.html">
-				<img src="img/placeholder-150x150-1.png" alt="placeholder square">
-				<h3>First Coded Portfolio</h3>
+				<img src="img/iconValidator.png" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-1">Form Validator</h3>
 			</a>
 		</div>
 		<!-- Sprout CU -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
+		<div id ="prj-container-2" class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
 			<a href="work/sprout.html">
-				<img src="img/placeholder-150x150-2.png" alt="placeholder square">
-				<h3>Sprout Credit Union</h3>
+				<img src="img/iconSprout.png" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-2">Sprout Credit Union</h3>
+			</a>
+		</div>
+		<!-- Time's Past -->
+		<div id ="prj-container-3" class="project-preview col-sm-12 col-md-6 col-lg-3 filter java">
+			<a href="work/times-past.html">
+				<img src="img/iconTimesPast.png" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-3">Time's Past</h3>
+			</a>
+		</div>
+		<!-- IAT 339 Portfolio -->
+		<div id ="prj-container-4" class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
+			<a href="work/first-portfolio.html">
+				<img src="img/iconPortfolio.png" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-4">First Coded Portfolio</h3>
 			</a>
 		</div>
 		<!-- Helping Hand -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter java">
+		<div id ="prj-container-5" class="project-preview col-sm-12 col-md-6 col-lg-3 filter java">
 			<a href="work/helping-hand.html">
-				<img src="img/placeholder-150x150-3.png" alt="placeholder square">
-				<h3>Helping Hand</h3>
+				<img src="img/iconHelpingHand.jpeg" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-5">Helping Hand</h3>
 			</a>
 		</div>
 		<!-- Adoption Awareness -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter graphics communications">
+		<div id ="prj-container-6" class="project-preview col-sm-12 col-md-6 col-lg-3 filter graphics communications">
 			<a href="work/adoption-awareness.html">
-				<img src="img/placeholder-150x150-4.png" alt="placeholder square">
-				<h3>Adoption Awareness Month</h3>
+				<img src="img/iconAAM.png" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-6">Adoption Awareness Month</h3>
 			</a>
 		</div>
 		<!-- Studious Chef -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
+		<div id ="prj-container-7" class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
 			<a href="work/studious-chef.html">
-				<img src="img/placeholder-150x150-5.png" alt="placeholder square">
-				<h3>The Studious Chef</h3>
+				<img src="img/iconStudiousChef.png" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-7">The Studious Chef</h3>
 			</a>
 		</div>
 		<!-- Sunday Morning Simulator -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter java graphics">
+		<div id ="prj-container-8" class="project-preview col-sm-12 col-md-6 col-lg-3 filter java graphics">
 			<a href="work/sunday-morning.html">
-				<img src="img/placeholder-150x150.png" alt="placeholder square">
-				<h3>Sunday Morning Simulator</h3>
-			</a>
-		</div>
-		<!-- Retrofit Your Home -->
-		<div class="project-preview col-sm-12 col-md-6 col-lg-3 filter web">
-			<a href="work/retrofit-your-home.html">
-				<img src="img/placeholder-150x150-1.png" alt="placeholder square">
-				<h3>Retrofit Your Home</h3>
+				<img src="img/iconSunday.png" alt="placeholder square" class="project-icon">
+				<h3 id="proj-header-8">Sunday Morning Simulator</h3>
 			</a>
 		</div>
 	</div> <!-- project previews -->
@@ -140,5 +140,6 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="https:/code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="js/filter.js"></script>
+		<script src="js/projectHover.js"></script>
 </body>
 </html>
