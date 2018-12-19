@@ -200,7 +200,8 @@ section p {
 }
 
 .navLink:focus, .navLink a:active, .navLink a:hover {
-    color: #ED6A5A!important;
+    /* color: #ED6A5A!important; */
+    color: #69C6B3!important;
 }
 
 .nav-item {
@@ -214,7 +215,8 @@ section p {
 }
 
 .nav-item:active, .nav-item:focus, .nav-item:hover {
-    color: #ED6A5A!important;
+    /* color: #ED6A5A!important; */
+    color: #69C6B3!important;
 }
 
 .banner img {
@@ -268,7 +270,7 @@ section p {
 }
 
 .project-icon:active, .project-icon:focus, .project-icon:hover {
-  opacity: 0.2!important;
+  opacity: 0.05!important;
   -webkit-transition: opacity 0.5s ease-out!important;
   -o-transition: opacity 0.5s ease-out!important;
   transition: opacity 0.5s ease-out!important;
@@ -294,18 +296,34 @@ section p {
 .filter-button {
     margin: 1rem 0;
     color: #FFFFFF;
+    /*
     background-color: #73C887;
     border-color: #73C887;
+    */
+    background-color: #3A3A3A;
+    border-color: #3A3A3A;
 }
 
 .filter-button:active, .filter-button:focus, .filter-button:hover {
-    color: #73C887;
-    background-color: #FFFFFF;
-    border-color: #FFFFFF;
+    /* color: #73C887; */
+    /* color: #219290; */
+    background-color: #69C6B3;
+    border-color: #69C6B3;
 
     -webkit-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
     -o-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
     transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
+}
+
+.filter-item {
+  color: #2A2A2A;
+}
+
+.filter-item:active, .filter-item:focus, .filter-item:hover {
+  color: #73C887;
+  -webkit-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
 }
 
 
