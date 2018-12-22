@@ -23,11 +23,12 @@
 <body>
 	<nav class="navigation navbar navbar-light bg-white navbar-expand-sm" id="navbar-bg">
 		<div class="container-fluid">
-			<a href="index.html" class="nav-item nav-link active navbar-brand" id="navLogo">
+			<a href="projects.html" class="nav-item nav-link active navbar-brand" id="navLogo">
 				<img id="tw-icon" src="../img/icon.png" alt="Taylor Wilkinson portfolio icon">
 			</a><!-- inital icon -->
-			<a href="../index.html" class="nav-item nav-link active navbar-brand" id="navNameText">
-				taylor wilkinson
+			<a href="../projects.html" class="nav-item nav-link active navbar-brand" id="navNameText">
+				<p id="navTitle">taylor wilkinson</p>
+				<p id="navSubtitle">developer + designer</p>
 			</a><!-- inital icon -->
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNavBar" aria-controls="toggleNavBar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +38,7 @@
 			<div class="collapse navbar-collapse" id="toggleNavBar">
 				<div class="navbar-nav ml-auto">
 					<a href="../projects.html" class="nav-item nav-link">PROJECTS</a>
-					<a href="#" class="nav-item nav-link">RESUME</a>
+					<a href="Resume_TaylorWilkinson.pdf" target="_blank" class="nav-item nav-link">RESUME</a>
 					<a href="../about.html" class="nav-item nav-link">ABOUT</a>
 				</div>
 			</div> <!-- Collapse -->
@@ -47,54 +48,174 @@
 
 	<div class="container body-copy">
 		<div class="row full-row">
+			<div class="col-xs-12 col-md-6 mx-auto no-side-padding">
+				<figure>
+					<img src="../img/sproutHome.png" class="img-fluid" alt="Screen capture of Sprout's home page">
+				</figure>
+			</div>
+		</div>
+		<div class="row full-row">
 			<div class="col-lg-6 no-side-padding">
 				<h1>Sprout Credit Union</h1>
 			</div>
 		</div> <!-- title section -->
 
-		<div class="row">
-			<div class="col-lg-4">
+		<div class="row full-row">
+			<div class="col-lg-4 no-side-padding">
 				<h2>team</h2>
 				<p>Sherry Wang, Taylor Wilkinson</p>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-4 no-side-padding">
 				<h2>tools</h2>
 				<p>HTML5, CSS3</p>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-4 no-side-padding">
 				<h2>my role</h2>
-				<p>Web Developer & Designer</p>
+				<p>Web Developer; User Experience Developer</p>
 			</div>
 		<!-- close project summary -->
 		</div>
 		<div class="row">
 			<div class="col-lg-6">
 				<h2>brief</h2>
-				<p>Develop a web application using a database of our own choosing that implements a set of required technologies. The final course project for Internet Computing Technologies (IAT 352). 2017.</p>
+				<p>A month long project to design a website for a fictional company of our making, with an emphasis on responsive design. (IAT 339). 2018.</p>
+				<p>Project requirements included:</p>
+				<ul>
+					<li>Company styleguide, including grid structure and colour swatches
+					<li>Content using real language (i.e. no Lorem Ipsum) appropriate for the company, it's voice, and the products it sells, including: company updates/events, about the company and multi-product/multi-service listings</li>
+					<li>Determine and build a sitemap to illustrate page hierarchy and the links between pages</li>
+					<li>Working with git, and proof of team members work on their individual branches</li>
+				</ul>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/sproutAdvice.png" class="img-fluid" alt="Screen capture of Sprout's finacial advising page.">
+					<figcaption>
+						Screen capture of Sprout's finacial advising page. March 2018.
+					</figcaption>
+				</figure>
 			</div>
 		</div>
-	</div>
-	http://www.sfu.ca/~tjwilkin/IAT%20339/P02/Final%20Week/
-	<!-- landing page content TBD -->
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>coding</h2>
+				<p>Both team members contributed to writing equal portions of the website's code </p>
+			</div>
+			<div class="col-lg-6">
+				<pre>
+					<code>
+&lt;section&gt;
+      &lt;div class="product-content"&gt;
+        &lt;div class="product"&gt;
+          &lt;h2 class="product-text"&gt;No-Fee Chequing&lt;/h2&gt;
+          &lt;p class="product-text"&gt;Here’s a no-fuss chequing account for your daily banking needs. Don’t get charged anything for your daily chequing transactions.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;No monthly fee&lt;/li&gt;
+            &lt;li&gt;Elligible free transactions include withdrawals, cheques, bill payments, point of sale transactions, pre-authorized debits, and Canadian credit union ATM withdrawals&lt;/li&gt;
+            &lt;li&gt;For a small fee, you can access cheque image returns for cheques you write out&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;a href="login-for-product.html" class="apply-para-button"&gt;LOG IN TO APPLY&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="product"&gt;
+          &lt;h2 class="product-text"&gt;Super Chequing&lt;/h2&gt;
+          &lt;p class="product-text"&gt;You work hard for your money, so make sure your money is working for you. This account gives you For only $8.00 a month, get your daily chequing transactions covered with some extra perks, like free cheques. To top it all off, this account will earn you interest!&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Monthly fee: $8.00&lt;/li&gt;
+            &lt;li&gt;Receive free bank drafts, foreign drafts, cheque orders&lt;/li&gt;
+            &lt;li&gt;Tiered interest rate (starting at 0.25%) is calculated daily and paid out monthly on all balances&lt;/li&gt;
+            &lt;li&gt;Elligible free transactions include withdrawals, cheques, bill payments, point of sale transactions, pre-authorized debits, and Canadian credit union ATM withdrawals&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;a href="login-for-product.html" class="apply-para-button"&gt;LOG IN TO APPLY&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="product"&gt;
+          &lt;h2 class="product-text"&gt;Stellar Savings&lt;/h2&gt;
+          &lt;p class="product-text"&gt;You want to easily save your money without too many strings attached. We get it. For no monthly fee, and no required minimum balance, this account gives you 5 monthly transactions and earns you 1.20%. Let us help you grow your savings.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;No monthly fee&lt;/li&gt;
+            &lt;li&gt;Current rate: 1.20%&lt;/li&gt;
+            &lt;li&gt;Earn the high interest rate on your entire balance, paid out monthly&lt;/li&gt;
+            &lt;li&gt;Rate is calculated on the daily closing balance&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;a href="login-for-product.html" class="apply-para-button"&gt;LOG IN TO APPLY&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+					</code>
+				</pre>
+				<p class="snippet">Code snippet from the Personal Products page, showcasing the three offered products</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>information architecture</h2>
+				<p>... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... </p>
+				<p>... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... </p>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/sproutSiteMap.png" alt="Diagram displaying Sprout Credit Union's proposed sitemap.">
+					<figcaption>
+						[Sprout Credit Union's proposed sitemap. March 2018.]
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>section</h2>
+				<p>... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... </p>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/sproutProducts.png" class="img-fluid" alt="Screen capture of Sprout's finacial advising page.">
+					<figcaption>
+						Screen capture of Sprout's finacial advising page. March 2018.
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>reflections</h2>
+				<p>... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... </p>
+				<p>... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... </p>
+				<button class="cta-button" target="_blank" onclick="location.href='http://www.sfu.ca/~tjwilkin/IAT%20339/P02/Final%20Week/'">SEE WEBSITE</button>
+				<button class="cta-button" target="_blank" onclick="location.href='https://github.com/TaylorWilkinson/P02---IAT339'">SEE GIT REPO</button>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/sproutNews.png" alt="Screen capture of the News page">
+					<figcaption>
+						Screen capture of the News page. March, 2018.
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div> <!-- landing page content TBD -->
+
+	<button onclick="topFunction()" id="backToTopButton" title="Go to top">Back To Top</button> <!-- Button to scroll back to top because, that's too much work! -->
 
 	<footer class="footer" id="portfolio-footer">
 		<div class="container">
 			<div class="row">
 				<a href="https://github.com/TaylorWilkinson/" target="_blank">
-					<img class="icon" src="img/github-logo.png" alt="GitHub logo">
+					<img class="icon" src="../img/github-logo.png" alt="GitHub logo">
 				</a>
 				<a href="https://www.linkedin.com/in/taylorjwilkinson/" target="_blank">
-					<img class="icon" src="img/linkedin-logo.png" alt="LinkedIn logo">
+					<img class="icon" src="../img/linkedin-logo.png" alt="LinkedIn logo">
 				</a>
 				<a href="mailto:tjwilkin@sfu.ca">
-					<img class="icon" src="img/email-logo.png" alt="Email envelope icon">
+					<img class="icon" src="../img/email-logo.png" alt="Email envelope icon">
 				</a>
 			</div>
 		</div>
 	</footer> <!-- footer -->
 
-  	<script src="js/jquery.slim.min.js"></script>
-  	<script src="js/popper.min.js"></script>
-  	<script src="js/bootstrap.min.js"></script>
+  	<script src="../js/jquery.slim.min.js"></script>
+  	<script src="../js/popper.min.js"></script>
+  	<script src="../js/bootstrap.min.js"></script>
+  	<script src="../js/scrollButton.js"></script>
 </body>
 </html>

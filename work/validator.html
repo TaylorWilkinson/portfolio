@@ -23,11 +23,12 @@
 <body>
 	<nav class="navigation navbar navbar-light bg-white navbar-expand-sm" id="navbar-bg">
 		<div class="container-fluid">
-			<a href="index.html" class="nav-item nav-link active navbar-brand" id="navLogo">
+			<a href="projects.html" class="nav-item nav-link active navbar-brand" id="navLogo">
 				<img id="tw-icon" src="../img/icon.png" alt="Taylor Wilkinson portfolio icon">
 			</a><!-- inital icon -->
-			<a href="../index.html" class="nav-item nav-link active navbar-brand" id="navNameText">
-				taylor wilkinson
+			<a href="../projects.html" class="nav-item nav-link active navbar-brand" id="navNameText">
+				<p id="navTitle">taylor wilkinson</p>
+				<p id="navSubtitle">developer + designer</p>
 			</a><!-- inital icon -->
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleNavBar" aria-controls="toggleNavBar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +38,7 @@
 			<div class="collapse navbar-collapse" id="toggleNavBar">
 				<div class="navbar-nav ml-auto">
 					<a href="../projects.html" class="nav-item nav-link">PROJECTS</a>
-					<a href="#" class="nav-item nav-link">RESUME</a>
+					<a href="Resume_TaylorWilkinson.pdf" target="_blank" class="nav-item nav-link">RESUME</a>
 					<a href="../about.html" class="nav-item nav-link">ABOUT</a>
 				</div>
 			</div> <!-- Collapse -->
@@ -46,6 +47,13 @@
 
 
 	<div class="container body-copy">
+		<div class="row full-row">
+			<div class="col-sm-12 col-sm-6 col-md-6 mx-auto no-side-padding">
+				<figure>
+					<img src="../img/validator-AEM.png" class="img-fluid" alt="Screen capture of validator returning an error to user in AEM">
+				</figure>
+			</div>
+		</div>
 		<div class="row full-row">
 			<div class="col-lg-6 no-side-padding">
 				<h1>BlackBerry Form Validator</h1>
@@ -60,7 +68,7 @@
 			</div>
 			<div class="col-lg-4 no-side-padding">
 				<h2>tools</h2>
-				<p>Eclipse, JavaScript, XML, Git</p>
+				<p>Eclipse, JavaScript, XML, RegEx, Git</p>
 			</div>
 			<div class="col-lg-4 no-side-padding">
 				<h2>my role</h2>
@@ -71,21 +79,75 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<h2>brief</h2>
-				<p>After seeking additional work and challenge during my work term, I was tasked with this task by one of the Web Applications Developers on my team. I was asked to restrict the allowable characters that would be accepted by the name field of specific components on BlackBerry’s authoring site. August 2018.</p>
+				<p>After seeking additional work and challenge during my work term, I was assigned this task by one of the Web Applications Developers on the Digital Marketing team. I needed to restrict the acceptable input characters for the name field of multiple components on BlackBerry's authoring site. June to August 2018.</p>
 			</div>
 		</div> <!-- end of section :: brief -->
 
 		<div class="row">
 			<div class="col-lg-6">
+				<h2>research</h2>
+				<p>When I was given this job, there was no clear or required deadline, but it was clear that it was an important issue to address. At that time, if someone included a special character in the name of a form component, the form's name would be unreadable to the back-end software. This room for error posed a major issue to the Marketing department, who uses these forms for a variety of purposes including lead generation.</p>
+				<p>Since this was my first time writing a validator and I had only basic JavaScript experience prior, I found some documents and tutorials online to refresh myself. I also read through documentation on Adobe Experience Manager (AEM), the content management software that was used. I also taught myself about regular expressions (RegEx) at the suggestion of another developer who thought it may be useful.</p>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<img src="../img/validator_AEMDocumentationCropped.png"  alt="A screen capture of Screencapture of AEM's documentation on TouchUI dialog values, specifically on writing JavaScript validation code" >
+					<figcaption>
+						A screen capture of Screencapture of AEM's documentation on TouchUI dialog values, specifically on writing JavaScript validation code. July 2018.
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
 				<h2>coding</h2>
-				<p>Copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy.</p>
+				<p>Once I had my own local host set up, I would work on writing code for the form validator whenever I had spare time around projects of higher priority. To begin with, I wrote smaller functions to test different ideas and to practice the various RegEx expressions.</p>
+				<p>After a few iterations, I had written a JavaScript function that worked as intended and provided an error message in plain language to indicate the issue and help the user recover quickly. After testing the function and ensuring it wouldn't negatively affect unrelated components, I got permission from the lead developer to push the code to the website's master branch and request that it go to production.</p>
+			</div>
+			<div class="col-lg-6">
+				<pre>
+					<code>
+"use strict";
+
+use(function () {
+	//test function to determine RegExp and relevant properties
+	//final goal: restrict the name field for form inputs to only allow letters, numbers, and dashes(-)
+
+	var properties = granite.resource.properties,
+	name = properties.name,
+	regex = new RegExp("^[a-zA-Z0-9-_]*$"),
+	noSpecialChar = regex.test(name);
+	specialCharPresent = false;
+
+	if(noSpecialChar == false){
+		specialCharPresent = true;
+	};
+
+	return {
+		name: name,
+		noSpecialChar: noSpecialChar,
+		specialCharPresent: specialCharPresent
+	};
+});
+					</code>
+				</pre>
+				<p class="snippet">A test function used to determine RegEx and relevant properties. July 2018.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>implementation</h2>
+				<p>Once my JavaScript function was pushed to production, it was found that the authoring website could not create forms correctly. As much as my very kind team assured me that it was likely not my code and probably something else, it ended up that it was definitely my code at the root of the issue. They reverted my push, and I was back to working on it again to figure out what was wrong.</p>
+				<p>After more testing on my own and a pair programming session with one of the Web Applications developers, we found the issue: a line of code I had referred to from AEM's documentation conflicted with other plugins being used on the website. I was able to make the necessary edits to address the major crashing problem, while also taking the opportunity to clean up my code and add comments to allow the function to be edited easily in the future once my co-op term had ended.</p>
 			</div>
 			<div class="col-lg-6">
 				<pre>
 					<code>
 /*
  Purpose: Restrict the name field for form inputs to only allow letters, numbers, dashes (-), and underscores (_)
- Based on AEM documentation for TouchUI Validation (https://helpx.adove.com/experience-manager/using/creating-touchui-validate.html)
+ Based on AEM documentation for TouchUI Validation (https://helpx.adobe.com/experience-manager/using/creating-touchui-validate.html)
  Used for the following form components: "consent", "hidden", "options", "text"
 */
 
@@ -131,29 +193,21 @@
 })(document, Granite.$, Granite);
 					</code>
 				</pre>
-				<p class="snippet">JavaScript code used in the form validator.</p>
+				<p class="snippet">The final JavaScript code used in the form validator. August 2018.</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-lg-6">
-				<h2>research</h2>
-				<p>Copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy.</p>
-			</div>
-			<div class="col-lg-6">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-6">
-				<h2>implementation</h2>
-				<p>Copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy.</p>
+				<h2>reflections</h2>
+				<p>After chipping away at this project, before the end of my internship I was able to provide and implement code for BlackBerry's authoring site. While it wasn't a very complex job, it pushed me out of my comfort zone and showed that I'm willing to work on the fly. While it didn't work flawlessly when it was first pushed, the problems I faced emphasized that iteration needs to happen in one's own work, as code will rarely work perfectly the first time around.</p>
+				<p>Also, I'm aware that I only got this job assigned to me because I asked for it. Because I approached the developers on my team and made it clear that I wanted to do more code-related work than what I was given day-to-day, I got the opportunity to practice, learn new skills, and grow as a developer.</p>
 			</div>
 			<div class="col-lg-6">
 				<figure>
-					<img src="../img/validator-AEM.png" alt="alt statement to go here">
+					<img src="../img/validator-in-use.png" alt="A screen capture of the validator being used on the AEM authoring site">
 					<figcaption>
-						[caption to go here]
+						A screen capture of the validator being used on the AEM authoring site. August 2018.
 					</figcaption>
 				</figure>
 			</div>

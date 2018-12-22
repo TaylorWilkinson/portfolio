@@ -1,16 +1,45 @@
+/* Colour Variables */
+:root {
+  --navColor: #2A2A2A;
+  --navHoverColor: #69C6B3;
+  --bodyColor: #2A2A2A;
+  /* --headerColor: #99D3DF;;
+  --header2Color: #88BBD6;
+  --header3Color: #5C5C5C; */
+  --headerColor: #606060;
+  --header2Color: #7D7D7D;
+  --header3Color: #7D7D7D;
+  /* --linkColor: #99D3DF; */
+  --linkColor: #69C6B3;
+  --linkHoverColor: #ED6A5A;
+
+  --buttonTextColor: #FFFFFF;
+  --buttonBGColor: #88BBD6;
+  --buttonBGHover: #ED6A5A;
+
+  --filterCollapseTxtColor: #2A2A2A;
+  --filterCollapseBG: #FFFFFF;
+  --filterCollapseBGHover: #69C6B3;
+
+  --filterButtonTxtColor: #3A3A3A;
+  --filterButtonTxtHover: #69C6B3;
+  --filterButtonBG: #FFFFFF;
+
+}
+
 body {
-    color: #2A2A2A;
+    color: var(--bodyColor);
 }
 
 h1 {
     font-family: 'Raleway',  sans-serif;
-    color: #99D3DF;
+    color:var(--headerColor);
     font-weight: 400;
 }
 
 h2 {
     font-family: 'Raleway',  sans-serif;
-    color: #88BBD6;
+    color: var(--header2Color);
     font-weight: 400;
     margin: 0.5rem 0rem;
     font-size: 1.50rem;
@@ -18,7 +47,7 @@ h2 {
 
 h3 {
     font-family: 'Raleway',  sans-serif;
-    color: #88BBD6;
+    color: var(--header3Color);
     font-weight: 400;
     margin: 0.5rem 0;
     font-size: 1.25rem;
@@ -38,7 +67,7 @@ ol, ul {
 }
 
 ul {
-    list-style-type: none;
+    /* list-style-type: none; */
 }
 
 li {
@@ -47,14 +76,14 @@ li {
 
 a {
     text-decoration: none;
-    color: #99D3DF;
+    color: var(--linkColor);
     -webkit-transition: color 0.5s ease-out;
     -o-transition: color 0.5s ease-out;
     transition: color 0.5s ease-out;
 }
 
 a:active, a:focus, a:hover {
-    color: #ED6A5A;
+    color: var(--linkHoverColor);
 }
 
 header {
@@ -88,7 +117,7 @@ div code {
 button {
     font-family: 'Raleway',  sans-serif;
     padding: 0.50rem 1rem;
-    color: #FFFFFF;
+    color: var(--buttonTextColor);
     border-radius: 15px;
     border-style: solid;
     border-width: thin;
@@ -100,40 +129,17 @@ button {
 
 .cta-button {
     margin: 1rem 0;
-    background-color: #88BBD6;
-    border-color: #88BBD6;
+    background-color: var(--buttonBGColor);
+    border-color: var(--buttonBGColor);
 }
 
 .cta-button:active, .cta-button:focus, .cta-button:hover {
-    background-color: #ED6A5A;
-    border-color: #ED6A5A;
+    background-color: var(--buttonBGHover);
+    border-color: var(--buttonBGHover);
 }
 
 #about-button, #contact-button {
     margin-left: 1rem;
-}
-
-.cta-prj-button {
-    background-color: #99D3DF;
-    border-color: #99D3DF;
-}
-
-.cta-prj-button:active, .cta-prj-button:focus, .cta-prj-button:hover {
-    background-color: #ED6A5A;
-    border-color: #ED6A5A;
-}
-
-.styling-bullet {
-    list-style-type: disc;
-    color: #2D2D2D;
-    font-size: 1rem;
-    line-height: 1.8rem;
-}
-
-.styling-ordered {
-    color: #2D2D2D;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
 }
 
 img {
@@ -149,8 +155,12 @@ figure {
 }
 
 figure img {
-    border: solid 1px #D6D6D8;
+    border: solid 1px #F1F1F1;
     margin-bottom: 0.5rem;
+}
+
+#noBorder img {
+  border: solid 1px #FFFFFF;
 }
 
 figcaption {
@@ -165,7 +175,7 @@ section p {
 }
 
 #portfolio-footer {
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 1rem 0;
 
 }
 
@@ -193,7 +203,7 @@ section p {
     font-family: 'Raleway',  sans-serif;
     font-weight: 300;
     padding-left: 1rem!important;
-    color: #2A2A2A!important;
+    color: var(--navColor)!important;
     -webkit-transition: color 0.5s ease-out;
     -o-transition: color 0.5s ease-out;
     transition: color 0.5s ease-out;
@@ -201,22 +211,37 @@ section p {
 
 .navLink:focus, .navLink a:active, .navLink a:hover {
     /* color: #ED6A5A!important; */
-    color: #69C6B3!important;
+    color: var(--navHoverColor)!important;
+}
+
+#navTitle {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway',  sans-serif;
+  font-size: 1.25rem;
+}
+
+#navSubtitle {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway',  sans-serif;
+  font-size: 0.75rem;
 }
 
 .nav-item {
     font-family: 'Raleway',  sans-serif;
     font-weight: 300;
     padding-left: 1rem!important;
-    color: #2A2A2A!important;
+    /* color: #2A2A2A!important; */
+    color: var(--navColor)!important;
     -webkit-transition: color 0.5s ease-out!important;
     -o-transition: color 0.5s ease-out!important;
     transition: color 0.5s ease-out!important;
 }
 
 .nav-item:active, .nav-item:focus, .nav-item:hover {
-    /* color: #ED6A5A!important; */
-    color: #69C6B3!important;
+    /* color: #69C6B3!important; */
+    color: var(--navHoverColor)!important;
 }
 
 .banner img {
@@ -289,41 +314,72 @@ section p {
   color: #88BBD6;
 } */
 
-#filter-bar {
-    margin-bottom: 2.5rem;
+#filter-link {
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-family: 'Raleway',  sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--filterCollapseTxtColor);
+  background-color: var(--filterCollapseBG);
+  border-color: var(--filterCollapseTxtColor);
+  border-style: solid;
+  border-width: thin;
+
+  -webkit-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
+  transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
+}
+
+#filter-link:active, #filter-link:focus, #filter-link:hover {
+  color: var(--filterCollapseBG);
+  background-color: var(--filterCollapseBGHover);
+  border-color: var(--filterCollapseBGHover);
+}
+
+#filter-card {
+  padding: 1rem;
+}
+
+#filter-ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#filter-ul li {
+  margin: 0;
 }
 
 .filter-button {
-    margin: 1rem 0;
-    color: #FFFFFF;
-    /*
-    background-color: #73C887;
-    border-color: #73C887;
-    */
-    background-color: #3A3A3A;
-    border-color: #3A3A3A;
+  margin: 0.25rem;
+  margin-left: 0;
+  padding: 0.25rem;
+  display: inline-block;
+  color: var(--filterButtonTxtColor);
+  background-color: var(--filterButtonBG);
+  border-color: var(--filterButtonBG);
+  text-align: left;
+
+  -webkit-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
 }
 
 .filter-button:active, .filter-button:focus, .filter-button:hover {
-    /* color: #73C887; */
-    /* color: #219290; */
-    background-color: #69C6B3;
-    border-color: #69C6B3;
-
-    -webkit-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
-    -o-transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
-    transition: color 0.5s ease-out, background-color 0.5s ease-out, border-color 0.5s ease-out;
+    color: var(--filterButtonTxtHover);
 }
 
 .filter-item {
   color: #2A2A2A;
+  -webkit-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
 }
 
 .filter-item:active, .filter-item:focus, .filter-item:hover {
   color: #73C887;
-  -webkit-transition: color 0.5s ease-out;
-  -o-transition: color 0.5s ease-out;
-  transition: color 0.5s ease-out;
 }
 
 

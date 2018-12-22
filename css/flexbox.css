@@ -85,6 +85,12 @@ img {
 
 
 /* MEDIA QUERIES */
+@media (max-width: 767px) {
+  #filter-list {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
     /*576px = sm breakpoint in Bootstrap*/
     #navNameText {
