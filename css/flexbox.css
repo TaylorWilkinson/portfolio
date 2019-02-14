@@ -85,14 +85,24 @@ img {
 
 
 /* MEDIA QUERIES */
+/*576px = sm breakpoint in Bootstrap*/
+
+/* Project filter list */
 @media (max-width: 767px) {
   #filter-list {
     display: none;
   }
 }
 
-@media (max-width: 576px) {
-    /*576px = sm breakpoint in Bootstrap*/
+/* About: make text have larger margin */
+@media (max-width: 767px) {
+  p {
+    margin: 1rem 0;
+  }
+}
+
+/* navigation bar: toggle the nav links and make name text disappear */
+@media (max-width: 600px) {
     #navNameText {
         display: none;
     }

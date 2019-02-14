@@ -163,6 +163,10 @@ figure img {
   border: solid 1px #FFFFFF;
 }
 
+#aboutImg img {
+  margin: 1rem;
+}
+
 figcaption {
     font-family: 'Roboto',  sans-serif;
     font-style: italic;
