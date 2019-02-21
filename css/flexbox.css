@@ -96,8 +96,15 @@ img {
 
 /* About: make text have larger margin */
 @media (max-width: 767px) {
-  p {
-    margin: 1rem 0;
+  /* p {
+    margin: 1rem;
+  } */
+
+  #myBigOlFace {
+    width: auto;
+    margin: 0;
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 }
 
