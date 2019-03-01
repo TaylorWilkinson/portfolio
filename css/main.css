@@ -25,6 +25,7 @@
   --filterButtonTxtHover: #69C6B3;
   --filterButtonBG: #FFFFFF;
 
+  --footerTxtColor: #3A3A3A;
 }
 
 body {
@@ -181,6 +182,14 @@ section p {
 
 #portfolio-footer {
     margin: 2rem 0 1rem 0;
+}
+
+#footer-copy {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 0.45rem;
+  text-align: center;
+  color: var(--footerTxtColor);
 }
 
 #styleguide-footer {
