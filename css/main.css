@@ -55,14 +55,14 @@ h3 {
 }
 
 p {
-    font-family: 'Roboto',  sans-sans-serif;
+    font-family: 'Roboto',  sans-serif;
     font-weight: 300;
     font-size: 1rem;
     max-width: 75rem;
 }
 
 ol, ul {
-    font-family: 'Roboto',  sans-sans-serif;
+    font-family: 'Roboto',  sans-serif;
     font-weight: 300;
     font-size: 1rem;
 }
@@ -100,7 +100,7 @@ pre {
 }
 
 div code {
-    font-family: 'Roboto',  sans-sans-serif;
+    font-family: 'Roboto',  sans-serif;
     font-weight: 300;
     font-size: 80%;
     color: #88BBD6;
@@ -169,7 +169,7 @@ figure img {
 }
 
 figcaption {
-    font-family: 'Roboto',  sans-sans-serif;
+    font-family: 'Roboto',  sans-serif;
     font-style: italic;
     font-weight: 100;
     font-size: 0.75rem;
@@ -180,7 +180,7 @@ section p {
 }
 
 #portfolio-footer {
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
 
 }
 
@@ -428,7 +428,7 @@ section p {
     bottom: 2vh;
     right: 2vw;
     z-index: 99;
-    font-family: 'Roboto',  sans-sans-serif;
+    font-family: 'Roboto',  sans-serif;
     background-color: #88BBD6;
     color: white;
     border: none;
