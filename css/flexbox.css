@@ -42,6 +42,12 @@
     flex: 2 2 15em;
 }
 
+#full-width-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* .banner-txt {
     display: -webkit-flex;
     display: -ms-flex;
@@ -88,14 +94,6 @@ img {
 /* MEDIA QUERIES */
 /*576px = sm breakpoint in Bootstrap*/
 
-@media (max-width: 600px) {
-  p {
-    margin: auto;
-    margin-bottom: 1rem;
-    width: 60%;
-  }
-}
-
 /* Project filter list */
 @media (max-width: 767px) {
   #filter-list {
@@ -106,10 +104,11 @@ img {
 /* About: make text have larger margin */
 @media (max-width: 767px) {
   #portrait {
-    width: auto;
+    width: 100%;
+    height: auto;
     margin: 0 0 2rem 0;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    /* padding-left: 10rem;
+    padding-right: 10rem; */
   }
 }
 
