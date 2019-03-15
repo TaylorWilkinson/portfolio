@@ -205,6 +205,18 @@ section p {
   color: var(--footerTxtHover);
 }
 
+#footer-link {
+  text-decoration: none;
+  color: none;
+  -webkit-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+
+#footer-link:active, #footer-link:focus, #footer-link:hover {
+  color: none;
+}
+
 #styleguide-footer {
     padding: 0.5rem 0;
     width: 100%;
