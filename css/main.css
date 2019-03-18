@@ -356,7 +356,7 @@ section p {
 }
 
 #proj-header-1, #proj-header-2, #proj-header-3, #proj-header-4, #proj-header-5, #proj-header-6, #proj-header-7, #proj-header-8 {
-  font-weight: 200;
+  font-weight: 300;
   position: absolute;
   top: 47.5%;
   left: 50%;
