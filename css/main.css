@@ -196,9 +196,9 @@ section p {
   text-align: center;
   color: var(--footerTxtColor);
 
-  -webkit-transition: color 0.3s ease-out,;
-  -o-transition: color 0.3s ease-out,;
-  transition: color 0.3s ease-out,;
+  -webkit-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
 }
 
 #footer-copy:active, #footer-copy:focus, #footer-copy:hover {
@@ -263,13 +263,13 @@ section p {
   font-weight: 400;
   font-size: 0.75rem; */
   font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 0.75rem;
 }
 
 .nav-item {
-    font-family: 'Playfair Display',  serif;
-    font-weight: 400;
+    /* font-family: 'Playfair Display',  serif; */
+    /* font-weight: 400; */
     padding-left: 1rem!important;
     /* color: #2A2A2A!important; */
     color: var(--navColor)!important;
@@ -284,7 +284,8 @@ section p {
 }
 
 .nav-link {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     padding-left: 1rem!important;
     color: var(--navColor)!important;
@@ -414,7 +415,7 @@ section p {
   border-color: var(--filterButtonBG);
   text-align: left;
   font-family: 'Montserrat',  sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
 }
 
