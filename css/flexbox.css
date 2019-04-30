@@ -116,6 +116,7 @@ img {
 @media (max-width: 600px) {
     #navNameText {
         display: none;
+        /* text-align: center;
     }
 
     #toggleNavBar {
