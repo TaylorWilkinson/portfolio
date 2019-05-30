@@ -395,6 +395,10 @@ section p {
   padding: 1rem;
 } */
 
+#filter-list {
+  margin: 0;
+}
+
 #filter-ul {
   margin: 0;
   padding: 0;
