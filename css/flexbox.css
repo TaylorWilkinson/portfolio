@@ -119,9 +119,11 @@ img {
 /* About: make text have larger margin */
 @media (max-width: 767px) {
   #portrait {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
     height: auto;
-    margin: 0 0 2rem 0;
+    /* margin: 0 0 2rem 0; */
     /* padding-left: 10rem;
     padding-right: 10rem; */
   }

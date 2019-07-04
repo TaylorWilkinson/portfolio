@@ -121,6 +121,8 @@ button {
     font-family: 'Montserrat',  sans-serif;
     padding: 0.50rem 1rem;
     color: var(--buttonTextColor);
+    background-color: var(--buttonBGColor);
+    border-color: var(--buttonBGColor);
     border-radius: 15px;
     border-style: solid;
     border-width: thin;
@@ -128,6 +130,31 @@ button {
     -webkit-transition: border-color 0.3s ease-out,  background-color 0.3s ease-out;
     -o-transition: border-color 0.3s ease-out,  background-color 0.3s ease-out;
     transition: border-color 0.3s ease-out,  background-color 0.3s ease-out;
+}
+
+.about-button {
+  font-family: 'Montserrat',  sans-serif;
+  padding: 0.50rem 1rem;
+  color: var(--buttonTextColor);
+  background-color: var(--buttonBGColor);
+  border-color: var(--buttonBGColor);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: thin;
+  text-decoration: none!important;
+  -webkit-transition: border-color 0.3s ease-out,  background-color 0.3s ease-out;
+  -o-transition: border-color 0.3s ease-out,  background-color 0.3s ease-out;
+  transition: border-color 0.3s ease-out,  background-color 0.3s ease-out;
+}
+
+.about-button:active, .about-button:focus, .about-button:hover {
+  color: var(--buttonTextColor)!important;
+  background-color: var(--buttonBGHover)!important;
+  border-color: var(--buttonBGHover)!important;
+}
+
+.about-text {
+  text-align: center;
 }
 
 .cta-button {
@@ -171,6 +198,7 @@ figure img {
 }
 
 #portrait {
+  display: block;
   margin: 0;
 }
 
