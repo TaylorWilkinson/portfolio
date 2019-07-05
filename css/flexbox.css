@@ -121,11 +121,9 @@ img {
   #portrait {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.5rem;
     width: 50%;
     height: auto;
-    /* margin: 0 0 2rem 0; */
-    /* padding-left: 10rem;
-    padding-right: 10rem; */
   }
 }
 

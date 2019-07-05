@@ -1,32 +1,36 @@
 /* Colour Variables */
 :root {
-  --navColor: #2A2A2A;
-  --navHoverColor: #69C6B3;
-  --bodyColor: #2A2A2A;
+  --navColor: #3A3A3A; /* dark gray */
+  --navHoverColor: #69C6B3; /* teal */
+  --bodyColor: #3A3A3A; /* dark gray */
+
   /* --headerColor: #99D3DF;;
   --header2Color: #88BBD6;
   --header3Color: #5C5C5C; */
   --headerColor: #606060;
   --header2Color: #7D7D7D;
   --header3Color: #7D7D7D;
+
   /* --linkColor: #99D3DF; */
-  --linkColor: #69C6B3;
-  --linkHoverColor: #ED6A5A;
+  --linkColor: #69C6B3; /* teal */
+  --linkHoverColor: #ED6A5A; /* red */
 
-  --buttonTextColor: #FFFFFF;
-  --buttonBGColor: #88BBD6;
-  --buttonBGHover: #ED6A5A;
+  --buttonTextColor: #FFFFFF;  /* white */
+  /* --buttonBGColor: #88BBD6;  /* powder blue */
+  --buttonBGColor: #69C6B3; /* teal */
+  --buttonBGHover: #ED6A5A; /* red */
 
-  --filterCollapseTxtColor: #2A2A2A;
-  --filterCollapseBG: #FFFFFF;
-  --filterCollapseBGHover: #69C6B3;
+  --filterCollapseTxtColor: #3A3A3A; /* dark gray */
+  --filterCollapseBG: #FFFFFF; /* white */
+  --filterCollapseBGHover: #69C6B3; /* teal */
 
-  --filterButtonTxtColor: #3A3A3A;
-  --filterButtonTxtHover: #69C6B3;
-  --filterButtonBG: #FFFFFF;
+  --filterButtonTxtColor: #3A3A3A; /* dark gray */
+  --filterButtonTxtHover: #69C6B3;  /* teal */
+  --filterButtonBG: #FFFFFF; /* white */
 
-  --footerTxtColor: #DADADA;
-  --footerTxtHover: #3A3A3A;
+  /* --footerTxtColor: #DADADA; /* light gray */
+  --footerTxtColor: #ABD9D0; /* light teal */
+  --footerTxtHover: #3A3A3A; /* dark gray*/
 }
 
 body {
@@ -78,7 +82,7 @@ li {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none!important;
     color: var(--linkColor);
     -webkit-transition: color 0.5s ease-out;
     -o-transition: color 0.5s ease-out;
@@ -155,6 +159,11 @@ button {
 
 .about-text {
   text-align: center;
+  /* width: auto; */
+}
+
+#about-header2 {
+  margin-top: 2rem;
 }
 
 .cta-button {
