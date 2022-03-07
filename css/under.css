@@ -1,0 +1,33 @@
+body {
+  background-color: #212121;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 75vh;
+  width: 100%;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+p.small {
+  font-size: 0.75rem;
+  color: #454545;
+}
+p.smaller {
+  font-size: 0.5rem;
+  color: #292929;
+}
