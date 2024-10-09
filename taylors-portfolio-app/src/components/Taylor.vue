@@ -88,7 +88,7 @@ export default {
       // Remove the loading class after the animation ends
       setTimeout(() => {
         this.isLoading = false
-      }, 500)
+      }, 1000)
     }
   }
 }
@@ -139,11 +139,11 @@ export default {
   }
 }
 .subtitle-refresh {
-  transition: transform 0.5s;
+  transition: transform 0.7s;
   will-change: transform;
 }
 .loading {
-  animation: loading-rotation 0.5s linear;
+  animation: loading-rotation 0.7s ease;
 }
 
 @keyframes loading-rotation {
