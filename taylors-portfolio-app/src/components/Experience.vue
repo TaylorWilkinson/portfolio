@@ -48,7 +48,7 @@
           <li>Figma</li>
           <li>Axure</li>
           <li>Sketch</li>
-          <li>Adobe Experience Manager (AEM)</li>
+          <li>Adobe Experience Manager</li>
         </ul>
       </div>
     </div>
