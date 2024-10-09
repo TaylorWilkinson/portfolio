@@ -46,6 +46,10 @@ import IconSparkles from './icons/IconSparkles.vue'
           src="../assets/img/extreme-chill.png"
           alt="Taylor Wilkinson wearing pink sunglasses and an all-black business-casual outfit while lying diagonally and upside-down in a black armchair, pointing her hands into finger guns pointed at the camera"
         />
+        <span class="graphic-container" id="sparkles"><IconSparkles /></span>
+        <span class="graphic-container" id="cat"><IconCat /></span>
+        <span class="graphic-container" id="d20"><IconD20 /></span>
+        <span class="graphic-container" id="self-portrait"><IconSelfPortrait /></span>
       </div>
     </div>
   </section>
@@ -117,6 +121,7 @@ export default {
   }
 }
 .intro-img-container {
+  position: relative;
   width: 100%;
   @media screen and (min-width: 1110px) {
     width: 50%;
@@ -140,7 +145,6 @@ export default {
 }
 .subtitle-refresh {
   transition: transform 0.7s;
-  will-change: transform;
 }
 .loading {
   animation: loading-rotation 0.7s ease;
@@ -149,6 +153,74 @@ export default {
 @keyframes loading-rotation {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.graphic-container {
+  transition: transform 0.75s;
+  animation: pop-in 0.75s linear;
+}
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.25);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#sparkles,
+#cat,
+#d20,
+#self-portrait {
+  position: absolute;
+}
+#cat {
+  top: 5%;
+  right: 20%;
+  @media screen and (min-width: 800px) {
+    top: 15%;
+    right: 22%;
+  }
+}
+#d20 {
+  top: 20%;
+  left: 5%;
+  @media screen and (min-width: 800px) {
+    top: 0;
+    left: 30%;
+  }
+}
+#self-portrait {
+  bottom: 10%;
+  left: 0;
+  @media screen and (min-width: 800px) {
+    bottom: 25%;
+    left: 20%;
+  }
+  @media screen and (min-width: 1110px) {
+    right: -5%;
+    bottom: 25%;
+  }
+}
+#sparkles {
+  right: 15%;
+  bottom: 10%;
+  @media screen and (min-width: 800px) {
+    right: -5%;
+    bottom: 45%;
+  }
+  @media screen and (min-width: 1110px) {
+    right: -5%;
+    top: 30%;
   }
 }
 </style>
