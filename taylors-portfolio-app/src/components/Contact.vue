@@ -3,17 +3,22 @@ import SpotifyPlayer from './SpotifyPlayer.vue'
 </script>
 
 <template>
-  <section class="container" id="contact">
-    <div class="contact-container">
+  <section class="container contact" id="contact">
+    <div class="spotify-container">
       <h2>Where we dropping?</h2>
-      <SpotifyPlayer />
+      <div class="spotify-container">
+        <SpotifyPlayer />
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.contact-container {
-  margin: 2rem 0 5rem 0;
+.contact {
+  margin: 2rem 0;
+  display: flex;
+}
+.spotify-container {
   display: flex;
   flex-direction: column;
   align-items: center;

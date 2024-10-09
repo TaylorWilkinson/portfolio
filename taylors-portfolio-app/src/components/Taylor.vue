@@ -1,12 +1,10 @@
 <script setup>
-import { ref } from 'vue'
 import IntroBGPolygon from './IntroBGPolygon.vue'
 import IconCat from './icons/IconCat.vue'
 import IconD20 from './icons/IconD20.vue'
 import IconRefresh from './icons/IconRefresh.vue'
 import IconSelfPortrait from './icons/IconSelfPortrait.vue'
 import IconSparkles from './icons/IconSparkles.vue'
-const counter = ref(0)
 </script>
 
 <template>
@@ -16,8 +14,13 @@ const counter = ref(0)
       <div class="intro-copy-container br-2">
         <h1 class="h1">Taylor Wilkinson</h1>
         <div class="intro-subtitle-container">
-          <h2 id="subtitle">is a front-end developer</h2>
-          <span class="subtitle-refresh" @click="counter++" data-state="clicked"
+          <h2 id="subtitle">
+            {{ subtitles[currentIndex].text }}
+          </h2>
+          <span
+            class="subtitle-refresh"
+            @click="spin(), changeText()"
+            :class="{ loading: isLoading }"
             ><IconRefresh
           /></span>
         </div>
@@ -43,13 +46,56 @@ const counter = ref(0)
   </section>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      currentIndex: 0,
+      isLoading: false,
+      isFading: false,
+      subtitles: [
+        { text: 'is a front-end web developer' },
+        { text: 'hopes you’re having a good day' },
+        { text: 'is always learning' },
+        { text: 'has a cat with a weird meow' },
+        { text: 'is so Julia' },
+        { text: 'hopes to be reincarnated as a capybara' },
+        { text: 'is more than a culture hire' },
+        { text: 'believes in you' },
+        { text: 'loves Dungeons & Dragons' },
+        { text: 'has a pun for that' },
+        { text: 'would like to thank all women' },
+        { text: 'is a Taurus Sun, Aries Moon, Cancer Rising' },
+        { text: 'wants to hear about your pet' }
+      ]
+    }
+  },
+  methods: {
+    changeText() {
+      if (this.currentIndex === this.subtitles.length - 1) {
+        this.currentIndex = 0
+      } else {
+        this.currentIndex++
+      }
+    },
+    spin() {
+      this.isLoading = true
+      // Remove the loading class after the animation ends
+      setTimeout(() => {
+        this.isLoading = false
+      }, 500)
+    }
+  }
+}
+</script>
+
 <style scoped>
 .intro-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 2.5rem 0;
+  padding: 2.5rem;
   width: 100%;
   @media screen and (min-width: 1110px) {
     flex-direction: row;
@@ -88,17 +134,16 @@ const counter = ref(0)
   }
 }
 .subtitle-refresh {
-  svg {
-    transition: all 2s;
-    will-change: transform;
-  }
-  &[data-state='clicked'] {
-    animation: loading-rotation 2s linear;
-  }
+  transition: transform 0.5s;
+  will-change: transform;
 }
+.loading {
+  animation: loading-rotation 0.5s linear;
+}
+
 @keyframes loading-rotation {
   100% {
-    transform: rotate(365deg);
+    transform: rotate(360deg);
   }
 }
 </style>

@@ -50,6 +50,12 @@ h2 {
     font-size: 24px;
   }
 }
+h3 {
+  margin: 0;
+  color: var(--steel-blue);
+  font-weight: 600;
+  font-size: 18px;
+}
 p {
   color: var(--main-text-color);
   font-family: 'Inter', sans-serif;
@@ -58,6 +64,15 @@ p {
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
+}
+li {
+  color: var(--main-text-color);
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
 }
 a {
   color: var(--link-text-color);
@@ -73,10 +88,11 @@ img {
 }
 
 .container {
+  padding: 0 2.5rem;
   display: flex;
-  padding: 0 5rem;
   align-items: flex-start;
   @media screen and (min-width: 1110px) {
+    padding: 0 5rem;
     align-items: center;
   }
 }
