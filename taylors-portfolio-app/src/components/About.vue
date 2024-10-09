@@ -2,15 +2,15 @@
   <section class="container about" id="about">
     <div class="about-container">
       <div class="about-copy br-2">
-        <h2>Hello there internet traveller!</h2>
+        <h2>Hello there, internet traveller!</h2>
         <p>
           I am a normal human woman (definitely not a nursery of raccoons in a human suit) that
           writes codes for a living. My career in web development began in the 2010s when I was
-          playing with custom CSS on my secret One Direction tumblr blog. Once I realized “Wow,
-          people do this for a living!” (“this” being development and web design, not reposting
-          2010s celebrity photos), it propelled me to apply to SFU’s SIAT program - an
-          interdisciplinary school that covered development, design, and media. I graduated in 2019
-          with my BSc. in Interactive Systems.
+          playing with custom CSS on my secret fandom tumblr blog. Once I realized “Wow, people do
+          this for a living!” (“this” being development and web design, not reposting 2010s
+          celebrity photos), it propelled me to apply to SFU’s SIAT program - an interdisciplinary
+          school that covered development, design, and media. I graduated in 2019 with my BSc. in
+          Interactive Systems.
         </p>
         <p>
           Fast forward to now, I am working as a web developer in-house on a marketing team, working
@@ -22,15 +22,18 @@
           parent, hobbyist photographer, astrology nerd, and music lover.
         </p>
       </div>
-      <div class="about-img"><img class="circle-img" src="../assets/img/taylor.png" /></div>
+      <div class="about-img">
+        <img
+          class="circle-img"
+          src="../assets/img/taylor.png"
+          alt="Profile picture of Taylor Wilkinson"
+        />
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.about {
-  margin: 2rem 0;
-}
 .about-container {
   display: flex;
   flex-direction: column;

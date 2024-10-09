@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer"><p>made with love</p></footer>
+  <footer class="footer"><p>handmade by taylor wilkinson</p></footer>
 </template>
 
 <style scoped>
@@ -9,6 +9,7 @@
   text-align: center;
   p {
     font-size: 6px;
+    color: var(--steel-blue);
   }
 }
 </style>

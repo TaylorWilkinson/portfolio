@@ -78,6 +78,7 @@ a {
   color: var(--link-text-color);
   text-decoration: none;
   transition: color 0.35s ease-in-out;
+  font-weight: 300;
 }
 a:hover {
   color: var(--hover-text-color);
@@ -92,6 +93,7 @@ img {
   display: flex;
   align-items: flex-start;
   @media screen and (min-width: 1110px) {
+    margin: 5rem 0;
     padding: 0 5rem;
     align-items: center;
   }
@@ -103,6 +105,9 @@ img {
 }
 .br-2 {
   border-radius: 2rem;
+}
+.mt-0 {
+  margin-top: 0;
 }
 .mb-0 {
   margin-bottom: 0;

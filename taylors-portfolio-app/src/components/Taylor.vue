@@ -8,7 +8,7 @@ import IconSparkles from './icons/IconSparkles.vue'
 </script>
 
 <template>
-  <section class="container home" id="home">
+  <section class="container home mt-0" id="home">
     <IntroBGPolygon />
     <div class="intro-container">
       <div class="intro-copy-container br-2">
@@ -21,26 +21,31 @@ import IconSparkles from './icons/IconSparkles.vue'
             class="subtitle-refresh"
             @click="spin(), changeText()"
             :class="{ loading: isLoading }"
+            v-on:keypress="spin(), changeText()"
+            aria-controls="subtitle"
+            tabindex="0"
             ><IconRefresh
           /></span>
         </div>
         <p>
           If you’re looking for a creative front-end developer who is passionate about your end
           user’s experience, promoting web accessibility for all, and is excited to collaborate
-          cross-functionally to build responsive and performant web experiences, then look no
+          cross-functionally and build responsive and performant web experiences, then look no
           further!
         </p>
         <div id="acknowledgment">
           <p class="mb-0">
-            I live and work on
-            <a href="https://maps.fpcc.ca/languages" target="_blank">the unceded territories</a> of
-            the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil-Waututh)
-            Nations, also known as Vancouver, BC.
+            I live and work on the unceded territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh
+            (Squamish), and səlilwətaɬ (Tsleil-Waututh) Nations, also known as Vancouver, BC.
           </p>
         </div>
       </div>
       <div class="intro-img-container">
-        <img class="taylor-1" src="../assets/img/extreme-chill.png" />
+        <img
+          class="taylor-1"
+          src="../assets/img/extreme-chill.png"
+          alt="Taylor Wilkinson wearing pink sunglasses and an all-black business-casual outfit while lying diagonally and upside-down in a black armchair, pointing her hands into finger guns pointed at the camera"
+        />
       </div>
     </div>
   </section>
