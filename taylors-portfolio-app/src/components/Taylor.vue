@@ -43,13 +43,14 @@ import IconSparkles from './icons/IconSparkles.vue'
       <div class="intro-img-container">
         <img
           class="taylor-1"
+          loading="eager"
           src="../assets/img/extreme-chill.png"
           alt="Taylor Wilkinson wearing pink sunglasses and an all-black business-casual outfit while lying diagonally and upside-down in a black armchair, pointing her hands into finger guns pointed at the camera"
         />
+        <span class="graphic-container" id="self-portrait"><IconSelfPortrait /></span>
         <span class="graphic-container" id="sparkles"><IconSparkles /></span>
         <span class="graphic-container" id="cat"><IconCat /></span>
         <span class="graphic-container" id="d20"><IconD20 /></span>
-        <span class="graphic-container" id="self-portrait"><IconSelfPortrait /></span>
       </div>
     </div>
   </section>
@@ -115,7 +116,7 @@ export default {
   padding: 2.5rem;
   width: 100%;
   flex-direction: column;
-  @media screen and (min-width: 1110px) {
+  @media screen and (min-width: 1235px) {
     width: 50%;
     background: none;
   }
@@ -130,8 +131,17 @@ export default {
 .taylor-1 {
   width: 100%;
   height: auto;
+  animation: fade-in 0.5s linear both;
   @media screen and (min-width: 1110px) {
     max-width: 650px;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .intro-subtitle-container {
@@ -149,23 +159,78 @@ export default {
 .loading {
   animation: loading-rotation 0.7s ease;
 }
-
 @keyframes loading-rotation {
   100% {
     transform: rotate(360deg);
   }
 }
 
-.graphic-container {
-  transition: transform 0.75s;
-  animation: pop-in 0.75s linear;
+#sparkles,
+#cat,
+#d20,
+#self-portrait {
+  position: absolute;
+  svg {
+    width: 75px;
+    height: auto;
+  }
 }
+#cat {
+  top: 5%;
+  right: 20%;
+  animation: pop-in 0.75s linear 0.7s 1 normal both;
+  @media screen and (min-width: 800px) {
+    top: 15%;
+    right: 22%;
+  }
+}
+#d20 {
+  top: 20%;
+  left: 0;
+  animation: pop-in 0.75s linear 0.9s 1 normal both;
+  @media screen and (min-width: 800px) {
+    top: 5%;
+    left: 30%;
+  }
+}
+#self-portrait {
+  bottom: 10%;
+  left: 15%;
+  animation: pop-in 0.75s linear 1.1s 1 normal both;
+  @media screen and (min-width: 800px) {
+    bottom: 25%;
+    left: 20%;
+  }
+  @media screen and (min-width: 1110px) {
+    right: 0%;
+    bottom: 30%;
+  }
+}
+#sparkles {
+  right: -15%;
+  bottom: 10%;
+  animation: pop-in 0.75s linear 1.3s 1 normal both;
+  @media screen and (min-width: 800px) {
+    right: -5%;
+    bottom: 45%;
+  }
+  @media screen and (min-width: 1110px) {
+    right: -5%;
+    top: 35%;
+  }
+}
+
 @keyframes pop-in {
   0% {
     transform: scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 50%;
   }
   40% {
     transform: scale(1.25);
+    opacity: 100%;
   }
   60% {
     transform: scale(1);
@@ -175,52 +240,6 @@ export default {
   }
   100% {
     transform: scale(1);
-  }
-}
-#sparkles,
-#cat,
-#d20,
-#self-portrait {
-  position: absolute;
-}
-#cat {
-  top: 5%;
-  right: 20%;
-  @media screen and (min-width: 800px) {
-    top: 15%;
-    right: 22%;
-  }
-}
-#d20 {
-  top: 20%;
-  left: 5%;
-  @media screen and (min-width: 800px) {
-    top: 0;
-    left: 30%;
-  }
-}
-#self-portrait {
-  bottom: 10%;
-  left: 0;
-  @media screen and (min-width: 800px) {
-    bottom: 25%;
-    left: 20%;
-  }
-  @media screen and (min-width: 1110px) {
-    right: -5%;
-    bottom: 25%;
-  }
-}
-#sparkles {
-  right: 15%;
-  bottom: 10%;
-  @media screen and (min-width: 800px) {
-    right: -5%;
-    bottom: 45%;
-  }
-  @media screen and (min-width: 1110px) {
-    right: -5%;
-    top: 30%;
   }
 }
 </style>

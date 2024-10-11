@@ -15,7 +15,7 @@
 .intro-bg-polygon {
   display: none;
   opacity: 0;
-  @media screen and (min-width: 1110px) {
+  @media screen and (min-width: 1235px) {
     display: block;
     position: absolute;
     z-index: -100;

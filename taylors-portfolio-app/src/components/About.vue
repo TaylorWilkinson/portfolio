@@ -26,6 +26,7 @@
         <img
           class="circle-img"
           src="../assets/img/taylor.png"
+          loading="lazy"
           alt="Profile picture of Taylor Wilkinson"
         />
       </div>
