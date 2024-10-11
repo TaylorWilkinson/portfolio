@@ -4,7 +4,7 @@ import IconD20 from './icons/IconD20.vue'
 
 <template>
   <section class="container contact" id="contact">
-    <div class="spotify-container">
+    <div class="contact-container">
       <h2>Let's get in touch!</h2>
       <p>
         Have a role you think I'm the right fit for? Want to talk about web development? Hit me up
@@ -20,7 +20,7 @@ import IconD20 from './icons/IconD20.vue'
 .contact {
   display: flex;
 }
-.spotify-container {
+.contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;

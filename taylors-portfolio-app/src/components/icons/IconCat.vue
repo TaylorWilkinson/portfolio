@@ -1,5 +1,6 @@
 <template>
   <svg
+    role="img"
     width="100"
     height="81"
     viewBox="0 0 100 81"

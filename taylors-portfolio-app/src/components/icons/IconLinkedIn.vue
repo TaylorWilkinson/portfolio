@@ -6,6 +6,7 @@
     width="30px"
     height="30px"
     fill-rule="nonzero"
+    role="img"
   >
     <g
       fill="#225681"
