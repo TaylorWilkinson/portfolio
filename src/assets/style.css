@@ -90,7 +90,7 @@ img {
 
 .container {
   margin: 2.5rem 0;
-  padding: 0 2.5rem;
+  padding: 0 2rem;
   display: flex;
   align-items: flex-start;
   @media screen and (min-width: 1110px) {
@@ -112,4 +112,11 @@ img {
 }
 .mb-0 {
   margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
 }

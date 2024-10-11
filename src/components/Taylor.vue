@@ -8,7 +8,7 @@ import IconSparkles from './icons/IconSparkles.vue'
 </script>
 
 <template>
-  <section class="container home mt-0" id="home">
+  <section class="container" id="home">
     <IntroBGPolygon />
     <div class="intro-container">
       <div class="intro-copy-container br-2">
@@ -104,9 +104,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
-  padding: 2.5rem;
-  width: 100%;
   @media screen and (min-width: 1110px) {
     flex-direction: row;
   }
@@ -114,8 +113,7 @@ export default {
 .intro-copy-container {
   background: var(--cosmic-latte);
   padding: 2.5rem;
-  width: 100%;
-  flex-direction: column;
+  width: auto;
   @media screen and (min-width: 1235px) {
     width: 50%;
     background: none;
@@ -207,8 +205,8 @@ export default {
   }
 }
 #sparkles {
-  right: -15%;
-  bottom: 10%;
+  right: 0;
+  bottom: -5%;
   animation: pop-in 0.75s linear 1.3s 1 normal both;
   @media screen and (min-width: 800px) {
     right: -5%;

@@ -40,11 +40,15 @@ export default {
 <style scoped>
 .navigation {
   margin: 0;
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 16px;
+  gap: 1rem;
+  @media screen and (min-width: 1110px) {
+    padding: 1rem 5rem;
+  }
 }
 .nav-list {
   width: 100%;
@@ -54,7 +58,10 @@ export default {
   justify-content: flex-end;
   align-items: center;
   list-style-type: none;
-  gap: 2rem;
+  gap: 1rem;
+  @media screen and (min-width: 1110px) {
+    gap: 2rem;
+  }
 }
 .nav-item {
   margin: 0;
