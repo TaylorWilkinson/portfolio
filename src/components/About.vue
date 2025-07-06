@@ -4,18 +4,18 @@
       <div class="about-copy br-2">
         <h2>Hello there, internet traveller!</h2>
         <p>
-          I am a normal human woman (definitely not a nursery of raccoons in a human suit) that
-          writes codes for a living. My career in web development began in the 2010s when I was
-          playing with custom CSS on my secret fandom tumblr blog. Once I realized “Wow, people do
-          this for a living!” (“this” being development and web design, not reposting 2010s
-          celebrity photos), it propelled me to apply to SFU’s SIAT program - an interdisciplinary
-          school that covered development, design, and media. I graduated in 2019 with my BSc. in
-          Interactive Systems.
+          I am a normal human woman (definitely not a passel of possums in a human suit) that writes
+          codes for a living. My career in web development began in the 2010s when I was playing
+          with custom CSS on my secret fandom tumblr blog. Once I realized “Wow, people do this for
+          a living!” (“this” being development and web design, not reposting 2010s celebrity
+          photos), it propelled me to apply to SFU’s SIAT program - an interdisciplinary school that
+          covered development, design, and media. I graduated in 2019 with my BSc. in Interactive
+          Systems.
         </p>
         <p>
-          Fast forward to now, I am working as a web developer in-house on a marketing team, working
-          with internal stakeholders and marketers to maintain their website and manage web content.
-          And yes, I still love playing with CSS to this day.
+          Fast forward to now, I'm working as a web developer with 5+ years of experience working
+          for engineering and marketing teams alike. And yes, I still love playing with CSS to this
+          day.
         </p>
         <p class="mb-0">
           Outside of work, I’m a zealous Dungeons & Dragons player and game master. I’m also a cat
